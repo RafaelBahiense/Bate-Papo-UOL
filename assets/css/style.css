@@ -1,0 +1,29 @@
+body {
+    width: 375px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navbar_top {
+    width: 375px;
+    height: 80px;
+    background: brown;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.messages_container {
+    min-height: 667px;
+    padding-top: 106px;
+    background: cadetblue;
+}
+
+.navbar_bottom {
+    width: 375px;
+    height: 80px;
+    background: burlywood;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
