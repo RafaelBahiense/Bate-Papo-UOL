@@ -98,6 +98,10 @@ body * {
     opacity: 1; /* Firefox */
 }
 
-#hidden_users_tab  {
+#hidden_users_tab {
+    display: none;
+}
+
+#hidden_login_screen {
     display: none;
 }
