@@ -36,7 +36,7 @@ function startChatError(error) {
 function sessionStatusError(error) {
     const statusCode = error.response.status;
     alert("Erro desconhecido, a pagina será recarregada!");
-    window.location.reload(false);
+    window.location.replace(window.location.href)
 }
 
 
