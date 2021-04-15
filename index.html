@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Chat UOL</title>
@@ -16,14 +16,26 @@
         <ion-icon name="people"></ion-icon>
     </div>
     <div class="messages_container">
-        <div class="message">teste</div>
-        <div class="message">teste</div>
-        <div class="message">teste</div>
-        <div class="message">teste</div>
-        <div class="message">teste</div>
-        <div class="message">teste</div>
+        <div class="message in_out">
+            <span><span class="time">(09:21:45)</span>  <strong>João</strong>  entra na sala...</span>
+        </div>
+        <div class="message">
+            <span><span class="time">(09:22:28)</span>  <strong>João</strong> para <strong>Todos</strong>:  Bom dia</span>
+        </div>
+        <div class="message">
+            <span><span class="time">(09:22:38)</span>  <strong>Maria</strong> para <strong>João</strong>:  Oi João :)</span>
+        </div>
+        <div class="message private">
+            <span><span class="time">(09:21:45)</span>  <strong>João</strong> reservadamente para <strong>Maria</strong>:  Oi gatinha quer tc?</span>
+        </div>
+        <div class="message in_out">
+            <span><span class="time">(09:21:45)</span>  <strong>Maria</strong>  sai da sala...</span>
+        </div>
     </div>
     <div class="navbar_bottom">
+        <div>
+            <input class="msg_input" type="text" placeholder="Escreva aqui...">
+        </div>    
         <ion-icon name="paper-plane-outline"></ion-icon>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -1,29 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #E5E5E5;
+}
+
 body {
     width: 375px;
     margin: 0 auto;
     position: relative;
 }
 
+body * {
+    font-family: Roboto;
+}
+
 .navbar_top {
+    display: flex;
     width: 375px;
     height: 80px;
-    background: brown;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 0px;
     left: 0px;
+    padding: 0 22px;
+    font-size: 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_top > img {
+    width: 75px;
+    height: 53px;
 }
 
 .messages_container {
     min-height: 667px;
     padding-top: 106px;
-    background: cadetblue;
+    background: #F3F3F3;
+}
+
+.message {
+    display: flex;
+    min-height: 40px;
+    padding: 10px 8px;
+    margin-top: 4px;
+    background: #FFFFFF;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: pre-wrap;
+}
+
+.in_out {
+    background: #DCDCDC;
+    ;
+}
+
+.private {
+    background: #FFDEDE;
+
+}
+
+.time {
+    color: #AAAAAA;
 }
 
 .navbar_bottom {
+    display: flex;
     width: 375px;
     height: 80px;
-    background: burlywood;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     position: absolute;
     bottom: 0px;
     left: 0px;
+    padding: 0 17px;
+    font-size: 26px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.navbar_bottom input {
+    outline: none;
+    border: 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+  }
