@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/users.css">
     <title>Chat UOL</title>
 </head>
 <body>
@@ -37,6 +38,51 @@
             <input class="msg_input" type="text" placeholder="Escreva aqui...">
         </div>    
         <ion-icon name="paper-plane-outline"></ion-icon>
+    </div>
+    <div class="users_tab" id="hidden_users_tab">
+        <div>
+            <div class="submenu_title">Escolha um contato para enviar mensagem:</div>
+            <div>
+                <div class="options">
+                    <div>
+                        <ion-icon name="people"></ion-icon>
+                        <span>  Todos</span>
+                    </div>
+                    <ion-icon name="checkmark-sharp"></ion-icon>
+                </div>
+                <div class="options">
+                    <div>
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>  João</span>
+                    </div>
+                    <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+                </div>
+                <div class="options">
+                    <div>
+                        <ion-icon name="person-circle"></ion-icon>
+                        <span>  Maria</span>
+                    </div>
+                    <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+                </div>
+            </div>
+            <div class="submenu_title">Escolha a visibilidade:</div>
+            <div>
+                <div class="options">
+                    <div>
+                        <ion-icon name="lock-open"></ion-icon>
+                        <span>  Público</span>
+                    </div>
+                    <ion-icon name="checkmark-sharp"></ion-icon>
+                </div>
+                <div class="options">
+                    <div>
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <span>  Reservadamente</span>
+                    </div>
+                    <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/script.js"></script>

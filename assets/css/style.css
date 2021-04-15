@@ -96,4 +96,8 @@ body * {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #000000;
     opacity: 1; /* Firefox */
-  }
+}
+
+#hidden_users_tab  {
+    display: none;
+}
