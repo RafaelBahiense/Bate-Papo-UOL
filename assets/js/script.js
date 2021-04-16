@@ -28,12 +28,11 @@ function startChat() {
 
 function sessionStatus() {
     const request = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", requestObj);
-    request.catch(startChatError);
+    request.catch(sessionStatusError);
 }
 
 function startChatError(error) {
     const statusCode = error.response.status;
-    console.log(statusCode)
     if(statusCode === 400) {
         alert("Já existe um usuário online com esse nome!")
     }
