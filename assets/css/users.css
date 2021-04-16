@@ -5,11 +5,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    justify-content: flex-end;
+}
+
+.users_tab > div:first-child {
+    height: 100%;
+    width: 116px;;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.users_tab > div {
+.users_tab > div:last-child {
     height: 100%;
     width: 259px;;
     background: #FFFFFF;
