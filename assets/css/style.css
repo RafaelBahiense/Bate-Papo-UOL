@@ -37,9 +37,14 @@ body * {
 }
 
 .messages_container {
-    min-height: 667px;
+    height: 587px;
     padding-top: 106px;
     background: #F3F3F3;
+    overflow-y: scroll;
+}
+
+.placeholder_div {
+    height: 80px;
 }
 
 .message {
@@ -53,6 +58,7 @@ body * {
     font-size: 14px;
     line-height: 20px;
     white-space: pre-wrap;
+    word-break: break-all;
 }
 
 .in_out {
