@@ -13,6 +13,7 @@
     height: 100%;
     width: 259px;;
     background: #FFFFFF;
+    overflow-y: scroll;
 }
 
 .submenu_title {

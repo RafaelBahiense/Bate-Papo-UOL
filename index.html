@@ -15,24 +15,9 @@
 <body>
     <div class="navbar_top">
         <img src="assets/images/logo 1.png" alt="Logo">
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="people" onclick="showActiveUsersTab()"></ion-icon>
     </div>
     <div class="messages_container">
-        <div class="message in_out">
-            <span><span class="time">(09:21:45)</span>  <strong>João</strong>  entra na sala...</span>
-        </div>
-        <div class="message">
-            <span><span class="time">(09:22:28)</span>  <strong>João</strong> para <strong>Todos</strong>:  Bom dia</span>
-        </div>
-        <div class="message">
-            <span><span class="time">(09:22:38)</span>  <strong>Maria</strong> para <strong>João</strong>:  Oi João :)</span>
-        </div>
-        <div class="message private">
-            <span><span class="time">(09:21:45)</span>  <strong>João</strong> reservadamente para <strong>Maria</strong>:  Oi gatinha quer tc?</span>
-        </div>
-        <div class="message in_out">
-            <span><span class="time">(09:21:45)</span>  <strong>Maria</strong>  sai da sala...</span>
-        </div>
     </div>
     <div class="placeholder_div"></div>
     <div class="navbar_bottom">
@@ -41,7 +26,7 @@
         </div>    
         <ion-icon name="paper-plane-outline" onclick="sendMessage(this)"></ion-icon>
     </div>
-    <div class="users_tab" id="hidden_users_tab">
+    <div class="users_tab" id="hidden_users_tab" onclick="hideActiveUsersTab()">
         <div>
             <div class="submenu_title">Escolha um contato para enviar mensagem:</div>
             <div>

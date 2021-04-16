@@ -2,6 +2,8 @@
 
 let requestObj;
 let username;
+let to = "Todos";
+let type;
 
 function setUserName(element) {
     username = element.previousElementSibling.value;
@@ -75,6 +77,9 @@ function displayMessages(response) {
             buildPrivateMessage(response.data[i])
         }
     }
+    getActiveUsers()
+    console.log("getActiveUsers")
+
 }
 
 function buildPublicMessage(messageData) {
@@ -130,4 +135,50 @@ msgInput.addEventListener("keyup", function(event) {
     }
 });
 
-//
+// active users
+
+function showActiveUsersTab() {
+    document.querySelector(".users_tab").setAttribute("id", "");
+}
+
+function hideActiveUsersTab() {
+    document.querySelector(".users_tab").setAttribute("id", "hidden_users_tab");
+}
+
+function getActiveUsers() {
+    const request = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants");
+    request.then(buildParticipantsList);
+    request.catch(sessionStatusError);
+    console.log("finished getActiveUsers")
+}
+
+function buildParticipantsList(response) {
+    console.log("buildParticipantsList");
+    console.log(document.querySelector(".submenu_title").nextElementSibling);
+    console.log(response);
+    document.querySelector(".submenu_title").nextElementSibling.innerHTML =    `<div class="options">
+                                                                            <div>
+                                                                                <ion-icon name="people"></ion-icon>
+                                                                                <span>  Todos</span>
+                                                                            </div>
+                                                                            <ion-icon name="checkmark-sharp"></ion-icon>
+                                                                        </div>`;
+    for(let i = 0; i < response.data.length; i++) {
+        if(response.data[i].name !== to) {
+            buildUser(response.data[i].name, "");
+        }
+        else {
+            buildUser(response.data[i].name, " hidden");
+        }
+    }
+}
+
+function buildUser(userName) {
+    document.querySelector(".submenu_title").nextElementSibling.innerHTML +=   `<div class="options">
+                                                                            <div>
+                                                                                <ion-icon name="people"></ion-icon>
+                                                                                <span>  ${userName}</span>
+                                                                            </div>
+                                                                            <ion-icon name="checkmark-sharp" class="hidden"></ion-icon>
+                                                                        </div>`;
+}

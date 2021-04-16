@@ -111,3 +111,7 @@ body * {
 #hidden_login_screen {
     display: none;
 }
+
+.hidden {
+    display: none;
+}
